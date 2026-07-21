@@ -81,7 +81,7 @@ INDEX_HTML = """<!DOCTYPE html>
   .hero-inner{ position:relative; z-index:2; width:100%; padding-bottom:80px; }
   .hero .eyebrow{ color:#E8A79C; }
   .hero .eyebrow::before{ background:#E8A79C; }
-  .hero h1{ font-size:clamp(4rem,13vw,10.5rem); margin-top:10px; }
+  .hero h1{ font-size:clamp(3rem,13vw,10.5rem); margin-top:10px; overflow-wrap:break-word; word-break:break-word; }
   .hero h1 .out{ -webkit-text-stroke:2px #fff; color:transparent; }
   .hero-bottom{ display:flex; justify-content:space-between; align-items:flex-end; gap:30px; margin-top:40px; flex-wrap:wrap; }
   .hero p.lead{ max-width:440px; font-size:1.05rem; color:rgba(243,241,236,0.78); font-family:'Inter'; text-transform:none; }
@@ -158,7 +158,8 @@ INDEX_HTML = """<!DOCTYPE html>
   .sentiment-chip{ font-family:'IBM Plex Mono'; font-size:0.72rem; padding:9px 16px; border-radius:2px; border:1px solid rgba(232,167,156,0.35); color:rgba(243,241,236,0.85); }
   .sentiment-chip b{ color:#E8A79C; }
   .slider{ position:relative; max-width:760px; margin:0 auto; }
-  .slide-track{ position:relative; height:230px; }
+  .slide-track{ position:relative; min-height:230px; }
+  @media (max-width:520px){ .review-card{ padding:26px 22px; } }
   .review-card{ position:absolute; inset:0; background:var(--ink); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:34px; opacity:0; transform:translateX(30px); transition:opacity .5s, transform .5s; pointer-events:none; }
   .review-card.active{ opacity:1; transform:translateX(0); pointer-events:auto; }
   .review-card .stars{ color:var(--red); font-size:0.9rem; letter-spacing:2px; }
@@ -523,6 +524,7 @@ INDEX_HTML = """<!DOCTYPE html>
 
   /* testimonial slider */
   const cards = document.querySelectorAll('.review-card');
+  const track = document.getElementById('slideTrack');
   const dotsWrap = document.getElementById('sliderDots');
   cards.forEach((c, i) => {
     const b = document.createElement('button');
@@ -530,6 +532,19 @@ INDEX_HTML = """<!DOCTYPE html>
     b.addEventListener('click', () => showSlide(i));
     dotsWrap.appendChild(b);
   });
+  function syncTrackHeight(){
+    let max = 0;
+    cards.forEach(c => {
+      const prevDisplay = c.style.position;
+      c.style.position = 'static';
+      max = Math.max(max, c.offsetHeight);
+      c.style.position = prevDisplay || '';
+    });
+    track.style.height = max + 'px';
+  }
+  window.addEventListener('resize', syncTrackHeight);
+  window.addEventListener('load', syncTrackHeight);
+  syncTrackHeight();
   let slideIndex = 0;
   function showSlide(i){
     cards[slideIndex].classList.remove('active');
