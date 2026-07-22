@@ -28,6 +28,11 @@ INDEX_HTML = """<!DOCTYPE html>
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       background-color: #080A0F;
+      /* Orqa fon rasmi va qoramtir filtr qo'shildi */
+      background-image: linear-gradient(to bottom, rgba(8, 10, 15, 0.85), rgba(8, 10, 15, 0.95)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=2000&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       color: #F3F4F6;
     }
     h1, h2, h3, .font-heading {
@@ -88,8 +93,8 @@ INDEX_HTML = """<!DOCTYPE html>
   <!-- HERO SECTION -->
   <section id="top" class="min-h-screen relative flex items-center justify-center pt-28 pb-16 px-4 sm:px-8 overflow-hidden">
     <!-- Ambient Lights -->
-    <div class="absolute top-1/4 -left-32 w-96 h-96 bg-red-600/20 rounded-full blur-[120px] pointer-events-none"></div>
-    <div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-rose-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -left-32 w-96 h-96 bg-red-600/30 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-rose-600/20 rounded-full blur-[120px] pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-12 items-center relative z-10">
       <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
@@ -105,7 +110,7 @@ INDEX_HTML = """<!DOCTYPE html>
           </span>
         </h1>
 
-        <p class="text-gray-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+        <p class="text-gray-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
           Toʻqimachilik institutiga yaqin, tinch koʻchada joylashgan shinam mehmonxona. Samimiy xodimlar va 24/7 oliy darajadagi xizmat.
         </p>
 
@@ -121,7 +126,7 @@ INDEX_HTML = """<!DOCTYPE html>
 
       <!-- Hero Card Image -->
       <div class="lg:col-span-5 flex justify-center">
-        <div class="glass-card p-4 rounded-3xl neon-glow border border-white/10 w-full max-w-md text-center space-y-4">
+        <div class="glass-card p-4 rounded-3xl neon-glow border border-white/10 w-full max-w-md text-center space-y-4 backdrop-blur-xl">
           <div class="relative h-64 rounded-2xl overflow-hidden">
             <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop" alt="Hamilton Hotel Exterior" class="w-full h-full object-cover">
             <div class="absolute top-3 right-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-yellow-400 text-xs font-bold flex items-center gap-1">
@@ -148,7 +153,7 @@ INDEX_HTML = """<!DOCTYPE html>
   </section>
 
   <!-- MARQUEE STRIP -->
-  <div class="bg-gradient-to-r from-red-700 via-red-600 to-rose-700 py-3 overflow-hidden shadow-lg">
+  <div class="bg-gradient-to-r from-red-700 via-red-600 to-rose-700 py-3 overflow-hidden shadow-lg relative z-10">
     <div class="flex space-x-12 whitespace-nowrap animate-marquee text-white font-bold text-sm tracking-wider uppercase">
       <span><i class="fa-solid fa-square-parking mr-2"></i> Bepul Avtoturargoh</span>
       <span><i class="fa-solid fa-snowflake mr-2"></i> Konditsioner</span>
@@ -162,12 +167,12 @@ INDEX_HTML = """<!DOCTYPE html>
   </div>
 
   <!-- ABOUT SECTION -->
-  <section id="about" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto">
+  <section id="about" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto relative z-10">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
       <div class="space-y-6">
         <span class="text-red-500 font-semibold text-xs tracking-widest uppercase">Biz Haqimizda</span>
         <h2 class="text-3xl sm:text-5xl font-bold font-heading leading-tight">Tinch Koʻchada, <br>Samimiy Xizmat</h2>
-        <p class="text-gray-400 leading-relaxed font-light">
+        <p class="text-gray-300 leading-relaxed font-light">
           Hamilton Hotel — Toʻqimachilik institutiga piyoda masofada, tinch koʻchada joylashgan 3 yulduzli mehmonxona. Mehmonlarimiz xodimlarning samimiyligi va yordamga tayyorligini alohida ta’kidlashadi.
         </p>
 
@@ -208,7 +213,7 @@ INDEX_HTML = """<!DOCTYPE html>
   </section>
 
   <!-- ROOMS & PRICING -->
-  <section id="rooms" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/5">
+  <section id="rooms" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/5 relative z-10">
     <div class="text-center space-y-4 mb-12">
       <span class="text-red-500 font-semibold text-xs tracking-widest uppercase">Xonalar & Narxlar</span>
       <h2 class="text-3xl sm:text-5xl font-bold font-heading">Har Xil Byudjetga Mos Xonalar</h2>
@@ -271,12 +276,12 @@ INDEX_HTML = """<!DOCTYPE html>
         <p class="text-gray-300 text-sm leading-relaxed">Eng yuqori toifadagi premium xona — maksimal kenglik, yuqori sifatli qulayliklar va premium interyer.</p>
       </div>
 
-      <p class="text-center text-xs text-gray-500 mt-4">* Aniq narx va bo‘sh xonalar uchun Telegram orqali so‘rov yuborishingiz mumkin.</p>
+      <p class="text-center text-xs text-gray-400 mt-4">* Aniq narx va bo‘sh xonalar uchun Telegram orqali so‘rov yuborishingiz mumkin.</p>
     </div>
   </section>
 
   <!-- LOCATION & MAP -->
-  <section id="location" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/5">
+  <section id="location" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/5 relative z-10">
     <div class="grid lg:grid-cols-12 gap-12 items-center">
       <div class="lg:col-span-5 space-y-6">
         <span class="text-red-500 font-semibold text-xs tracking-widest uppercase">Joylashuv</span>
@@ -318,7 +323,7 @@ INDEX_HTML = """<!DOCTYPE html>
   </section>
 
   <!-- REVIEWS SLIDER -->
-  <section id="reviews" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/5">
+  <section id="reviews" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/5 relative z-10">
     <div class="text-center space-y-4 mb-12">
       <span class="text-red-500 font-semibold text-xs tracking-widest uppercase">Sharhlar</span>
       <h2 class="text-3xl sm:text-5xl font-bold font-heading">Mehmonlarimiz Fikri</h2>
@@ -336,7 +341,7 @@ INDEX_HTML = """<!DOCTYPE html>
   </section>
 
   <!-- FAQ ACCORDION -->
-  <section id="faq" class="py-24 px-4 sm:px-8 max-w-4xl mx-auto border-t border-white/5">
+  <section id="faq" class="py-24 px-4 sm:px-8 max-w-4xl mx-auto border-t border-white/5 relative z-10">
     <div class="text-center space-y-4 mb-12">
       <span class="text-red-500 font-semibold text-xs tracking-widest uppercase">FAQ</span>
       <h2 class="text-3xl sm:text-5xl font-bold font-heading">Ko'p So'raladigan Savollar</h2>
@@ -370,7 +375,7 @@ INDEX_HTML = """<!DOCTYPE html>
   </section>
 
   <!-- BOOKING CALL TO ACTION -->
-  <section id="book" class="py-24 px-4 sm:px-8 max-w-5xl mx-auto text-center">
+  <section id="book" class="py-24 px-4 sm:px-8 max-w-5xl mx-auto text-center relative z-10">
     <div class="glass-card p-12 rounded-3xl neon-glow border border-red-500/30 space-y-6">
       <h2 class="text-3xl sm:text-5xl font-extrabold font-heading text-white">Xonangizni Hoziroq Band Qiling</h2>
       <p class="text-gray-300 max-w-xl mx-auto text-sm sm:text-base">
@@ -394,7 +399,7 @@ INDEX_HTML = """<!DOCTYPE html>
   </a>
 
   <!-- FOOTER -->
-  <footer class="border-t border-white/5 py-8 text-center text-xs text-gray-500">
+  <footer class="border-t border-white/5 py-8 text-center text-xs text-gray-500 relative z-10">
     <p>© Hamilton Hotel — Qoraqum 1-tor koʻchasi, 42, Toshkent. Redesigned Next-Gen Interface.</p>
   </footer>
 
@@ -463,3 +468,4 @@ def book():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
+
