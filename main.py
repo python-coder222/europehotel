@@ -119,20 +119,20 @@ INDEX_HTML = """<!DOCTYPE html>
         </div>
       </div>
 
-      <!-- Rating Badge Card -->
+      <!-- Hero Card Image -->
       <div class="lg:col-span-5 flex justify-center">
-        <div class="glass-card p-8 rounded-3xl neon-glow border border-white/10 w-full max-w-md text-center space-y-6">
-          <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-tr from-red-600/20 to-rose-500/20 border border-red-500/30 text-red-500 text-3xl font-black">
-            4.7
-          </div>
-          <div>
-            <div class="text-yellow-400 text-lg space-x-1 mb-1">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        <div class="glass-card p-4 rounded-3xl neon-glow border border-white/10 w-full max-w-md text-center space-y-4">
+          <div class="relative h-64 rounded-2xl overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop" alt="Hamilton Hotel Exterior" class="w-full h-full object-cover">
+            <div class="absolute top-3 right-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-yellow-400 text-xs font-bold flex items-center gap-1">
+              <i class="fa-solid fa-star"></i> 4.7
             </div>
-            <h3 class="text-xl font-bold text-white">A'lo Darajadagi Reyting</h3>
-            <p class="text-gray-400 text-sm mt-1">189 ta real mehmonlar fikri asosida</p>
           </div>
-          <div class="grid grid-cols-2 gap-4 pt-4 border-t border-white/10 text-left">
+          <div class="px-2">
+            <h3 class="text-xl font-bold text-white font-heading">A'lo Darajadagi Mehmonxona</h3>
+            <p class="text-gray-400 text-xs mt-1">189+ ta real mehmonlar fikri va samimiy xizmat</p>
+          </div>
+          <div class="grid grid-cols-2 gap-4 pt-2 border-t border-white/10 text-left px-2">
             <div>
               <span class="text-xs text-gray-500 block uppercase">Xizmat Ko'rsatish</span>
               <span class="text-sm font-bold text-red-400">81% Musbat</span>
@@ -187,26 +187,21 @@ INDEX_HTML = """<!DOCTYPE html>
         </div>
       </div>
 
-      <div class="grid sm:grid-cols-2 gap-4">
-        <div class="glass-card glass-card-hover p-6 rounded-2xl space-y-3">
-          <i class="fa-solid fa-clock-rotate-left text-3xl text-red-500"></i>
-          <h3 class="font-bold text-lg">Kun-u Tun Ishlaydi</h3>
-          <p class="text-xs text-gray-400">Istalgan vaqtda cheklovsiz kirish va chiqish imkoniyati.</p>
+      <div class="space-y-4">
+        <div class="h-48 rounded-2xl overflow-hidden glass-card p-1 border border-white/10">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop" alt="Hotel Interior" class="w-full h-full object-cover rounded-xl">
         </div>
-        <div class="glass-card glass-card-hover p-6 rounded-2xl space-y-3">
-          <i class="fa-solid fa-square-parking text-3xl text-red-500"></i>
-          <h3 class="font-bold text-lg">Avtoturargoh</h3>
-          <p class="text-xs text-gray-400">Avtomobilingiz uchun xavfsiz va bepul joylar.</p>
-        </div>
-        <div class="glass-card glass-card-hover p-6 rounded-2xl space-y-3">
-          <i class="fa-solid fa-wind text-3xl text-red-500"></i>
-          <h3 class="font-bold text-lg">Konditsioner</h3>
-          <p class="text-xs text-gray-400">Har bir xonada zamonaviy iqlim nazorati tizimi.</p>
-        </div>
-        <div class="glass-card glass-card-hover p-6 rounded-2xl space-y-3">
-          <i class="fa-solid fa-graduation-cap text-3xl text-red-500"></i>
-          <h3 class="font-bold text-lg">Institutga 93 m</h3>
-          <p class="text-xs text-gray-400">Toʻqimachilik institutidan bir necha qadam masofada.</p>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="glass-card glass-card-hover p-6 rounded-2xl space-y-3">
+            <i class="fa-solid fa-clock-rotate-left text-3xl text-red-500"></i>
+            <h3 class="font-bold text-lg">Kun-u Tun Ishlaydi</h3>
+            <p class="text-xs text-gray-400">Istalgan vaqtda cheklovsiz kirish va chiqish imkoniyati.</p>
+          </div>
+          <div class="glass-card glass-card-hover p-6 rounded-2xl space-y-3">
+            <i class="fa-solid fa-square-parking text-3xl text-red-500"></i>
+            <h3 class="font-bold text-lg">Avtoturargoh</h3>
+            <p class="text-xs text-gray-400">Avtomobilingiz uchun xavfsiz va bepul joylar.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -229,6 +224,9 @@ INDEX_HTML = """<!DOCTYPE html>
     <!-- TAB PANELS -->
     <div class="max-w-3xl mx-auto">
       <div id="panel-standard" class="tab-panel glass-card p-8 rounded-3xl border border-white/10 space-y-6">
+        <div class="h-64 rounded-2xl overflow-hidden mb-4">
+          <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=800&auto=format&fit=crop" alt="Standard Room" class="w-full h-full object-cover">
+        </div>
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-6">
           <div>
             <span class="text-xs text-gray-400 uppercase tracking-wider">Kechasi uchun</span>
@@ -242,6 +240,9 @@ INDEX_HTML = """<!DOCTYPE html>
       </div>
 
       <div id="panel-comfort" class="tab-panel hidden glass-card p-8 rounded-3xl border border-white/10 space-y-6">
+        <div class="h-64 rounded-2xl overflow-hidden mb-4">
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800&auto=format&fit=crop" alt="Comfort Room" class="w-full h-full object-cover">
+        </div>
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-6">
           <div>
             <span class="text-xs text-gray-400 uppercase tracking-wider">Kechasi uchun</span>
@@ -255,6 +256,9 @@ INDEX_HTML = """<!DOCTYPE html>
       </div>
 
       <div id="panel-lux" class="tab-panel hidden glass-card p-8 rounded-3xl border border-white/10 space-y-6">
+        <div class="h-64 rounded-2xl overflow-hidden mb-4">
+          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=800&auto=format&fit=crop" alt="Lux Room" class="w-full h-full object-cover">
+        </div>
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-6">
           <div>
             <span class="text-xs text-gray-400 uppercase tracking-wider">Kechasi uchun</span>
@@ -302,7 +306,7 @@ INDEX_HTML = """<!DOCTYPE html>
           </div>
         </div>
 
-        <a href="https://yandex.uz/maps/-/CTVHRWyV" target="_blank" class="inline-block bg-gradient-to-r from-red-600 to-rose-600 text-white font-bold px-6 py-3 rounded-xl text-sm shadow-lg shadow-red-600/20">
+        <a href="https://yandex.uz/maps/org/hamilton/64371724280/" target="_blank" class="inline-block bg-gradient-to-r from-red-600 to-rose-600 text-white font-bold px-6 py-3 rounded-xl text-sm shadow-lg shadow-red-600/20">
           <i class="fa-solid fa-map-location-dot mr-2"></i> Yandex Xaritada O'tish
         </a>
       </div>
